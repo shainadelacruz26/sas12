@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Paragraph</title>
+</head>
+<body>
+    <style>
+        
+        
+    </style>
+    <!--H3 Tags-->
+    <div id="content">
+        <b><h3>WELCOME</h3></b>
+    </div>
+    <h3 id="demo1"></h3>
+    <button onclick="changeH3()" class="btn">Change Content</button>
+    
+    <div id="content1">
+        <b><h3>WELCOME</h3></b>
+    </div>
+    <h3 id="demo2"></h3>
+    <button onclick="changeH3A()" class="btn">Change Content</button>
+
+    <div id="content2">
+        <b><h3></h3></b>
+    </div>
+    <h3 id="demo3"></h3>
+    <button onclick="changeH3B()" class="btn">Change Content</button>
+
+    <script>
+        function changeH3() {
+            var d = document.getElementById("content").getElementsByTagName("h3")[0];
+            d.innerHTML = 'HI USER';
+            document.getElementById("demo1").innerHTML = d.innerHTML;
+        }
+
+        function changeH3A() {
+            var f = document.getElementById("content1").getElementsByTagName("h3")[0];
+            f.innerHTML = 'READ MORE';
+            document.getElementById("demo2").innerHTML = f.innerHTML;
+        }
+
+        function changeH3B() {
+            var h = document.getElementById("content2").getElementsByTagName("h3")[0];
+            h.innerHTML = 'CONTINUE';
+            document.getElementById("demo3").innerHTML = h.innerHTML;
+        }
+    </script>
+    
+    <!--ID-->
+    <p id="myparagraph">Welcome</p>
+    <button onclick="Change()">Click to change</button>
+    <p id="paragraph1"></p>
+    
+    <script>
+        
+        function Change() {
+            var x = document.getElementById("myparagraph");
+            x.innerHTML = "I am Shaina Dela Cruz"; 
+            document.getElementById("paragraph1").innerHTML = x.innerHTML;
+        }
+    </script>
+
+     <!--CLASSNAME-->
+     
+     <p class="school"><br>My School</p>
+     <p id="show"></p>
+     <button onclick="changeParagraph()">Click to display</button>
+     
+    <script>
+         function changeParagraph() {
+             var x = document.getElementsByClassName("school");
+             x[0].innerHTML = 'Aurollo University';
+             document.getElementById("show").innerHTML = 'My School is ' + x[0].innerHTML;
+         }
+    </script>
+    <p class="age"><br>My Age</p>
+    <p id="show1"></p>
+    <button onclick="changeParagraph2()">Click to display</button>
+    <script>
+        function changeParagraph2() {
+            var x = document.getElementsByClassName("age");
+            x[0].innerHTML = '20';
+            document.getElementById("show1").innerHTML = 'My age is ' + x[0].innerHTML;
+        }
+   </script>
+
+   <p class="address"><br>My Address</p>
+    <p id="show2"></p>
+    <button onclick="changeParagraph3()">Click to display</button>
+    <script>
+        function changeParagraph3() {
+            var x = document.getElementsByClassName("address");
+            x[0].innerHTML = 'Cabanatuan';
+            document.getElementById("show2").innerHTML = 'My Address is ' + x[0].innerHTML;
+        }
+   </script>
+
+    <!-- QUERY -->
+    <b><p class="show" id="section">SECTION</p></b>
+    <p id="demo3"></p>
+    
+    <button onclick="changeSection()">Change Section</button>
+    
+    <script>
+        function changeSection() {
+            var section = document.getElementById("section");
+            section.innerHTML = 'NORTH 2'; 
+            updateInfo();
+        }
+
+
+        function updateInfo() {
+            var section = document.getElementById("section");
+            var year = document.getElementById("year");
+            document.getElementById("demo3").innerHTML = 'My Section is : ' + year.innerHTML;
+        }
+    </script>
+</body>
+</html>
